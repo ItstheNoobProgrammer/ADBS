@@ -1,4 +1,4 @@
-Display the name of employee and their childern name
+#Display the name of employee and their childern name
 
 select fname, minit, lname, dependent_name from employee, dependent where employee.ssn=dependent.essn and ( relationship = 'Son' or  relationship='Daughter');
 
@@ -9,7 +9,7 @@ Franklin        T Wong            Alice
 John            B Smith           Alice
 John            B Smith           Michael
 
-Display all employes who do not have mgrsuperssn
+#Display all employes who do not have mgrsuperssn
 
 select * from employee where superssn is null;
 
