@@ -1,5 +1,18 @@
 Display the name of employee and their childern name
+
 select fname, minit, lname, dependent_name from employee, dependent where employee.ssn=dependent.essn and ( relationship = 'Son' or  relationship='Daughter');
 
+FNAME           M LNAME           DEPENDENT_NAME
+--------------- - --------------- ---------------
+Franklin        T Wong            Theodore
+Franklin        T Wong            Alice
+John            B Smith           Alice
+John            B Smith           Michael
+
 Display all employes who do not have mgrsuperssn
+
 select * from employee where superssn is null;
+
+FNAME           M LNAME           SSN       BDATE      ADDRESS                        S     SALARY SUPERSSN         DNO
+--------------- - --------------- --------- ---------- ------------------------------ - ---------- --------- ----------
+James           E Borg            888665555 1937-11-10 Houston,TX                     M      55000                    1
