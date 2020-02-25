@@ -1,0 +1,15 @@
+select takes.ID from takes where course_id like 'CS%';
+
+select name from instructor where dept_name='Finance' and salary>=75000;
+
+select student.name,instructor.name from student,advisor,instructo where s_id=student.id and i_id=instructor.id;
+
+create view exam1 as
+    select course.course_id, course.title,course.credits,section.sec_id, section.building,section.room_number
+   from course,section
+   where course.course_id=section.course_id and course.dept_name='Comp. Sci.' and section.semester='Spring' and section.year=2010;
+
+
+SELECT department.dept_name,avg(instructor.salary) as sal
+    FROM department, instructor
+    WHERE department.dept_name=instructor.dept_name having avg(instructor.salary) >30000 group by department.dept_name;
